@@ -25,6 +25,7 @@ For Compiling the Operating System image it is required that these dependencies 
 > * Netwide Assembler **NASM**
 > * GNU **Make**
 > * GNU general linker **ld**
+> * Astlye Formatter
 
 For Testing the Operating System it is recommended to use
 > **Qemu** the Emulator of our Choice  
