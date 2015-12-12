@@ -24,8 +24,11 @@ PRECOMP := $(CXXHEADERS:.h=.h.gch)
 LD := ld
 LDFLAGS := -m elf_i386 -T link.ld
 
+# Style Script
+STYLER := bash scripts/style.sh
+
 # Declare clean and run as Phony Targets
-.PHONY: clean run
+.PHONY: clean run style
 
 # The Final Product will be ultron.bin in the build directory
 all: ultron.bin
@@ -55,6 +58,11 @@ run: ultron.bin
 
 # Inlcude the Generated Make Files
 -include $(DEPENDS)
+
+# Style the Script uses AStlye to Format to GNU Style
+style:
+	$(STYLER) kernel cc
+	$(STYLER) kernel h
 
 # Clean this Mess
 clean: $(ASOBJECTS) $(CXXOBJECTS) $(DEPENDS) $(PRECOMP)
