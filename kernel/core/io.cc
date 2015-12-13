@@ -8,14 +8,14 @@
 
 // @ Fuction : outb
 // @ Descrption : Writes a value to a given port  address
-void Io::outb(u16int port, u8int value)
+void io::outb(u16int port, u8int value)
 {
   asm volatile ("outb %1, %0" : : "dN" (port), "a" (value));
 }
 
 // @ Fuction : inb
 // @ Descrption : Writes a value to a given port  address
-u8int Io::inb(u16int port)
+u8int io::inb(u16int port)
 {
   u8int ret;
   asm volatile("inb %1, %0" : "=a" (ret) : "dN" (port));
@@ -24,7 +24,7 @@ u8int Io::inb(u16int port)
 
 // @ Fuction : inw
 // @ Descrption : Writes a value to a given port  address
-u16int Io::inw(u16int port)
+u16int io::inw(u16int port)
 {
   u16int ret;
   asm volatile ("inw %1, %0" : "=a" (ret) : "dN" (port));

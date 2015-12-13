@@ -28,10 +28,10 @@ extern "C" void irq_handler(registers_t regs)
   // Send the EOI signal to the Slave
   // Slave handles the Interrupt from 40 to 47
   if(regs.int_no >= 40)
-    Io::outb(PIC_SLAVE_COMMAND , 0x20);
+    io::outb(PIC_SLAVE_COMMAND , 0x20);
 
   // Send Reset Signal to Master
-  Io::outb(PIC_MASTER_COMMAND , 0x20);
+  io::outb(PIC_MASTER_COMMAND , 0x20);
 
   // if Interrupt is already registered
   if(interrupt_handlers[regs.int_no] != 0)

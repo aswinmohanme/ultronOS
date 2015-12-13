@@ -18,16 +18,16 @@ void init_idt()
   memset(&idt_entries, 0, sizeof(idt_entry_t)*256);
 
   // Remap the IRQ table to match the  PIC "INterrupt
-  Io::outb(PIC_MASTER_COMMAND , 0x11);
-  Io::outb(PIC_SLAVE_COMMAND , 0x11);
-  Io::outb(PIC_MASTER_DATA , 0x20);
-  Io::outb(PIC_SLAVE_DATA , 0x28);
-  Io::outb(PIC_MASTER_DATA , 0x04);
-  Io::outb(PIC_SLAVE_DATA , 0x02);
-  Io::outb(PIC_MASTER_DATA , 0x01);
-  Io::outb(PIC_SLAVE_DATA , 0x01);
-  Io::outb(PIC_MASTER_DATA , 0x0);
-  Io::outb(PIC_SLAVE_DATA , 0x0);
+  io::outb(PIC_MASTER_COMMAND , 0x11);
+  io::outb(PIC_SLAVE_COMMAND , 0x11);
+  io::outb(PIC_MASTER_DATA , 0x20);
+  io::outb(PIC_SLAVE_DATA , 0x28);
+  io::outb(PIC_MASTER_DATA , 0x04);
+  io::outb(PIC_SLAVE_DATA , 0x02);
+  io::outb(PIC_MASTER_DATA , 0x01);
+  io::outb(PIC_SLAVE_DATA , 0x01);
+  io::outb(PIC_MASTER_DATA , 0x0);
+  io::outb(PIC_SLAVE_DATA , 0x0);
 
   // Initialise the IDT
   idt_set_gate( 0, (u32int)isr0 , 0x08, 0x8E);

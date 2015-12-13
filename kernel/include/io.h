@@ -1,6 +1,6 @@
 /*
   $ @ File : io.h
-  $ @ Decription : Contains the iPrototype of the Io class
+  $ @ Decription : Contains the iPrototype of the io class
   */
 
 #ifndef IO_INCLUDED
@@ -10,7 +10,7 @@
 
 // @ Class Name : io
 // @ Description : Defines io Handlers
-class Io
+class io
 {
 public:
   static void outb(u16int port , u8int value);

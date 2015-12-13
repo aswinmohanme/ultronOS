@@ -31,7 +31,7 @@
 /*
 @ Inherits from IO for using  inb and outb
 */
-class monitor : Io
+class monitor : io
 {
     // The VGA framebuffer starts at 0xB8000.
     u16int *video_memory;

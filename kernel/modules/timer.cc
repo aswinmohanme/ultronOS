@@ -29,13 +29,13 @@ void init_timer(u32int freq)
   u32int divisor = 1193180 / freq;
 
   // Send to the command byte to the PIT so set it to repeat mode
-  Io::outb(0x43 , 0x36);
+  io::outb(0x43 , 0x36);
 
   // Divisor has to be split into two bytes , upper half and lower half
   u8int low = (u8int)(divisor & 0xFF);
   u8int high = (u8int)((divisor >> 8) & 0x0FF);
 
   // Send the Divisor
-  Io::outb(0x40 , low);
-  Io::outb(0x40 , high);
+  io::outb(0x40 , low);
+  io::outb(0x40 , high);
 }
