@@ -16,13 +16,11 @@ int kmain(struct multiboot *mboot_ptr)
 
   clrscr();
 
-  // Initialise the Global Descriptor Table
-  init_gdt();
-  init_idt();
-  memset(&interrupt_handlers, 0, sizeof(isr_t)*256);
+  // Initialise the Descritor Tables
+  init_desc_tables();
 
-  asm volatile("sti");
-  init_timer(5);
+  // Initialise the Timer
+  init_timer(50);
 
   // Print Hello On to the Screen
   printj("Hello World \n");

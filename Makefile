@@ -18,7 +18,7 @@ CXXHEADERS := $(wildcard *h kernel/include/*.h)
 DEPENDS := $(CXXFILES:.cc=.d)
 
 # Manage the Precompiled Headers
-PRECOMP := $(CXXHEADERS:.h=.h.gch)
+PRECOMP := $(wildcard kernel/include/*.h.gch)
 
 # Linker
 LD := ld
@@ -66,4 +66,4 @@ style:
 
 # Clean this Mess
 clean: $(ASOBJECTS) $(CXXOBJECTS) $(DEPENDS) $(PRECOMP)
-		$(RM) $^
+		$(RM) -f $^

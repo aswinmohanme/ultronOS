@@ -23,6 +23,7 @@ typedef          char  s8int;
 #include "monitor.h"
 #include "memory.h"
 #include "timer.h"
+#include "common.h"
 
 
 #endif

@@ -20,6 +20,9 @@ void timer_callback(registers_t regs)
 // @ Task : Initialises the PIT and Sets the First IRQ to point to the Clock
 void init_timer(u32int freq)
 {
+  // Raise the Interrupt to Initialise the Clock
+  asm volatile("sti");
+
   // Register our Timer , with the address of the fuction to be called when
   // ever the Interrupt is raised
   register_interrupt_handler(IRQ0 , &timer_callback);
