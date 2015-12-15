@@ -17,7 +17,13 @@ void init_desc_tables()
 // @ Add Some Fancy Boot Text to the Screen
 void boot()
 {
-  printj("--------------------            ");
-  printj("Booting Up");
+  printj("Booting Up\n");
+  printj("Initialising the GDT \n");
+  printj("Initialising the IDT \n");
+  printj("Configuring PIC\n");
+  printj("Configuring TIMER\n");
+  printj("Loading System \n");
 
+  printj(" ========= System Ready ========== \n");
+  printj(" Hello World");
 }

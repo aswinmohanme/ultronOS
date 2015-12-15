@@ -20,7 +20,7 @@ int kmain(struct multiboot *mboot_ptr)
   init_desc_tables();
 
   // Initialise the Timer
-  init_timer(50);
+  //init_timer(50);
 
   // Print Hello On to the Screen
   boot();
