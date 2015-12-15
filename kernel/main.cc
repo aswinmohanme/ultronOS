@@ -23,6 +23,6 @@ int kmain(struct multiboot *mboot_ptr)
   init_timer(50);
 
   // Print Hello On to the Screen
-  printj("Hello World \n");
+  boot();
   return 1;
 }

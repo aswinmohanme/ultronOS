@@ -13,3 +13,11 @@ void init_desc_tables()
 
   memset(&interrupt_handlers, 0, sizeof(isr_t)*256);
 }
+
+// @ Add Some Fancy Boot Text to the Screen
+void boot()
+{
+  printj("--------------------            ");
+  printj("Booting Up");
+
+}

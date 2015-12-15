@@ -13,3 +13,5 @@
 // @ Task : Initialises the Descritor Tables
 // and pads all interruts with 0
 void init_desc_tables();
+
+void boot();
