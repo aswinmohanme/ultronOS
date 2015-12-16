@@ -9,7 +9,7 @@ ASOBJECTS := $(ASFILES:.s=.s.o)
 
 # Compile C++ Files
 CXX := g++
-CXXFLAGS := -c -nostdlib -nostdinc -fno-builtin -fno-stack-protector -ffreestanding -m32 -I./kernel/include
+CXXFLAGS := -c -nostdlib -nostdinc -fno-builtin -fno-stack-protector -ffreestanding -m32 -I./kernel/include -I./userland/include
 CXXFILES := $(wildcard *.cc kernel/*.cc kernel/core/*.cc kernel/modules/*.cc)
 CXXOBJECTS := $(CXXFILES:.cc=.o)
 CXXHEADERS := $(wildcard *h kernel/include/*.h)

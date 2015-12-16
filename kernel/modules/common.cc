@@ -22,8 +22,9 @@ void boot()
   printj("Initialising the IDT \n");
   printj("Configuring PIC\n");
   printj("Configuring TIMER\n");
+  printj("Configuring KEYBOARD\n");
   printj("Loading System \n");
 
-  printj(" ========= System Ready ========== \n");
+  printj("\n\n ========= System Ready ========== \n");
   printj(" Hello World");
 }
