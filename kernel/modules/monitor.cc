@@ -191,6 +191,13 @@ void printj(const char *s)
   mtr.write(s);
 }
 
+void putch(char ch)
+{
+  if (mtr.isinit() == false)
+    mtr.init();
+  mtr.putch(ch);
+}
+
 // @ Task : Print a Number on to the Screen
 void print_dec(u32int n)
 {

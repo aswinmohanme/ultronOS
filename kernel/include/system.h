@@ -24,6 +24,7 @@ typedef          char  s8int;
 #include "memory.h"
 #include "timer.h"
 #include "common.h"
+#include "keyboard.h"
 
 
 #endif

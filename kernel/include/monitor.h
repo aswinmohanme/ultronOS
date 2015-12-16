@@ -70,6 +70,7 @@ public:
 
 // @ Task : Print a Message on to the screen
 void printj(const char *s);
+void putch(char ch);
 // @ Print a Number on to the screen
 void print_dec(u32int n);
 // @ Task Clear the Screen

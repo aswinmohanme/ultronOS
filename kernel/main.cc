@@ -19,8 +19,11 @@ int kmain(struct multiboot *mboot_ptr)
   // Initialise the Descritor Tables
   init_desc_tables();
 
-  // Initialise the Timer
-  //init_timer(50);
+  // Reenable Interrupts
+  asm volatile("sti");
+
+  // All device Intialisations Go Here
+  init_keyboard_driver();
 
   // Print Hello On to the Screen
   boot();
