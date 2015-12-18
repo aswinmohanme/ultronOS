@@ -27,5 +27,6 @@ int kmain(struct multiboot *mboot_ptr)
 
   // Print Hello On to the Screen
   boot();
+
   return 1;
 }

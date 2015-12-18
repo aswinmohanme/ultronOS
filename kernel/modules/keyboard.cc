@@ -214,7 +214,7 @@ keymap_t gb =
   0
 };
 
-// Here begins the functionality
+
 keymap_t *current_layout;
 
 // Indices into the circular buffer for the keyboard data.
